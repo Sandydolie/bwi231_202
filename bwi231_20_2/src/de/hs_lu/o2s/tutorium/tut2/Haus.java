@@ -77,6 +77,15 @@ public class Haus {
 		" Etagen und es wohnen " + this.getEinwohner() + " Personen dort.";
 	}
 	
+	public double berechneVerkaufspreis(double quadratmeter) {
+		return this.getGrundstuecksFlaeche() * quadratmeter;
+	}
+	
+	public void druckMich() {
+		System.out.println(this.toString());
+		System.out.println();
+	}
+	
 	
 	
 }

@@ -15,7 +15,7 @@ public class AppHaus {
 		h5.setEinwohner(30);
 		
 		System.out.println(h1.toString());
-		
+		h1.druckMich();
 		System.out.println(h2.toString());
 		System.out.println(h3.toString());
 		System.out.println(h4.toString());

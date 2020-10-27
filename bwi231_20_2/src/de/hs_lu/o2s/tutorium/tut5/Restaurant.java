@@ -5,6 +5,9 @@ public class Restaurant extends Haus {
 	private double sitzflaeche;
 	private int maxKunden;
 	private final String inhaber;
+	private String[] getraenke;
+	
+
 
 	public Restaurant(String inhaber) {
 		// TODO Auto-generated constructor stub
@@ -66,6 +69,23 @@ public class Restaurant extends Haus {
 
 	public String getInhaber() {
 		return inhaber;
+	}
+
+	@Override
+	public double kostenSanierung(int Preis) {
+		return this.getGrundstuecksFlaeche() * Preis * 2.0;
+	}
+
+	@Override
+	public double berechneUmsatz(double Preis) {
+		return this.getEinwohner() * Preis;
+	}
+	
+	public void addGetraenk(String getraenk) {
+		String[] a = new String[this.getraenke.length +1];
+		System.arraycopy(a, 0, this.getraenke, 1, a.length);
+		this.getraenke = a;
+		this.getraenke[0] = getraenk;
 	}
 
 	

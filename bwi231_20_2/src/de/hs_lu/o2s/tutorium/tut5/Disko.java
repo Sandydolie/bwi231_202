@@ -72,11 +72,17 @@ public class Disko extends Haus {
 	
 	
 	private void alterbeschraenkungkorrekt(int alterbeschraenkung) {
-		
+		if (alterbeschraenkung > 18) {
+			
+		}else this.altersbeschraenkung = 18;
+		System.out.println("Ein Fehler ist aufgetreten, das Mindestalter war geringer als 18 Jahren, der Fehler wurde automatisch behoben");
 	}
 	
 	private double eintrittspreiskorrekt(double eintrittspreis) {
-		
+		//Eintrittpreis mind 12,50
+		if(eintrittspreis >= 12.50) {
+			return eintrittspreis;
+		}else return 12.50;
 	}
 
 	@Override

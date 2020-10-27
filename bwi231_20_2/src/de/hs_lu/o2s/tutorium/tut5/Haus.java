@@ -1,6 +1,6 @@
 package de.hs_lu.o2s.tutorium.tut5;
 
-public class Haus {
+public abstract class Haus {
 	
 	
 
@@ -77,5 +77,7 @@ public class Haus {
 		return this.getGrundstuecksFlaeche() * quadratmeterPreis;
 	}
 	
+	public abstract double kostenSanierung(int Preis);
+	public abstract double berechneUmsatz(double Preis);
 
 }

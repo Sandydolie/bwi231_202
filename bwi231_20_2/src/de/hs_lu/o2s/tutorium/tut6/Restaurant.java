@@ -1,6 +1,6 @@
 package de.hs_lu.o2s.tutorium.tut6;
 
-public class Restaurant extends Haus{
+public class Restaurant extends Haus implements Bar{
 	
 	private double sitzflaeche;
 	private int maxKunden;
@@ -75,6 +75,20 @@ public class Restaurant extends Haus{
 
 	public String getInhaber() {
 		return inhaber;
+	}
+
+	@Override
+	public double generateSteuererklärung() {
+		double steuer = 0.07;
+		double gewerbesteuer = 0.15;
+		return (this.getUmsatz() * steuer) + (this.getUmsatz() * gewerbesteuer);
+		
+	}
+
+	@Override
+	public void addGetraenke(String[] getraenk) {
+		
+		
 	}
 
 

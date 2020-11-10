@@ -20,9 +20,10 @@ public class Boot implements Comparable{
 		this.laenge = laenge;
 	}
 	
-	public Boot(int kajueten, double laenge, int passagiere) {
+	public Boot(int kajueten, double laenge, int passagiere) throws ZuVielePersonenException {
 		this(kajueten, laenge);
-		this.passagiere = passagiere;
+		this.checkPersonen(passagiere);
+		
 	}
 	
 	public void legtAn(String hafen) {
@@ -50,8 +51,8 @@ public class Boot implements Comparable{
 		return passagiere;
 	}
 
-	public void setPassagiere(int passagiere){
-		this.passagiere = passagiere;
+	public void setPassagiere(int passagiere) throws ZuVielePersonenException{
+		this.checkPersonen(passagiere);
 	}
 
 	public String getLiegtInHafen() {
@@ -63,6 +64,13 @@ public class Boot implements Comparable{
 				+ this.getKajueten() + " Kajueten. Momentan sind " + this.getPassagiere() + " Passagiere an Bord "
 				+ "und es liegt in dem Hafen " + this.getLiegtInHafen();
 		return s;
+	}
+	
+	private void checkPersonen(int anzahl) throws ZuVielePersonenException{
+		if(anzahl > this.kajueten) {
+			throw new ZuVielePersonenException();
+		}else this.passagiere = anzahl;
+		
 	}
 
 	@Override

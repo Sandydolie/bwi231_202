@@ -5,12 +5,6 @@ public class Segelboot extends Boot {
 	private int anzSegel;
 	private int baujahr;
 	
-//	Nur Notwendig, wenn sich der Name unterscheidet
-//	public void setPassagiere(int passagiere) throws ZuVielePersonenException {
-//		this.checkPersonen(passagiere);
-//		super.setPassagiere(passagiere);
-//	}
-	
 	public Segelboot(int kajueten, int passagiere){
 		super(kajueten);
 		this.setPassagiere(passagiere);

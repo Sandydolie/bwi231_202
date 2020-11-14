@@ -27,7 +27,7 @@ public class AppTestPersonListSorting {
 		System.out.println("Vergleich von Peter Meyer (1968) und Peter Meyer (1954): " + 
 				persA[0].compareTo(persA[3]));
 		
-		System.out.println("Vergleich von Peter Meyer und Matthias Jung: " + 
+		System.out.println("Vergleich von Peter Meyer und Anton Jung: " + 
 				persA[0].compareTo(persA[5]));
 		
 		System.out.println("Vergleich von Markus Laer (777888) und Markus Laer (777999): " + 

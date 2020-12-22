@@ -1,4 +1,4 @@
-package de.hs_lu.o2s.tutoritum.tut12;
+package de.hs_lu.o2s.tutorium.tut12;
 
 public class Klappbruecke extends Bruecke{
 	
